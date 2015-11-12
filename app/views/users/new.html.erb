@@ -1,0 +1,20 @@
+<center>
+	<h1>Profile registration:<br>------------------</h1>
+	<a href="/users">Back</a><br><br>
+	<%= form_for @users do |f|%>
+
+		<%= f.label :name %>
+		<%= f.text_field :name %><br>
+			<% @users.errors[:name].each do |err| %>
+				<h1 class="err"><%= err %><h1><br>
+			<% end %>
+
+		<%= f.label :email %>
+		<%= f.text_field :email %><br>
+			<% @users.errors[:email].each do |err| %>
+				<h1 class="err"><%= err %><h1><br>
+			<% end %>
+		<button type="submit">Sign up</button>
+	<% end %>
+
+</center>

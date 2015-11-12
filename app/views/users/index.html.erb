@@ -1,0 +1,12 @@
+<center>
+	<h1>Users page</h1>
+	<a href="/">Home</a><br>
+	<a href="/users/new">Create profile</a>
+	<h2>List<br>---------------</h2>
+	<% @users_list.each do |user| %>
+		<%= user.name %><br>
+		<%= user.email %><br>
+		<h1>Products:<a href="/users/<%=%>/products">Click here</a></h1>
+		--------------------------<br><br>
+	<% end %>
+</center>	
